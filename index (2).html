@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vedha Dental Clinic | Care for Your Teeth. Confidence in Your Smile.</title>
+  <meta name="description" content="Vedha Dental Clinic in Tiruppur, Tamil Nadu. Patient-focused dental care, check-ups, cleanings, and cosmetic consultations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #005c55;
+      --primary-dark: #004a44;
+      --mint: #d0e7e2;
+      --sky: #e7f6fe;
+      --ink: #0f1d23;
+      --muted: #4e625f;
+      --border: rgba(189, 201, 198, 0.3);
+      --white: #ffffff;
+      --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--muted);
+      background: var(--white);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 {
+      font-family: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button, input { font: inherit; }
+
+    .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    section { padding: 80px 0; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .section-head { max-width: 672px; margin: 0 auto 48px; text-align: center; }
+    .section-head h2 { font-size: 36px; margin-bottom: 16px; }
+    .section-head p { font-size: 17px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--primary); color: var(--white); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    .btn-secondary { background: var(--mint); color: var(--primary); border-color: var(--border); }
+    .btn-secondary:hover { background: #c4ddd7; }
+    .btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+      outline: 3px solid rgba(0, 92, 85, 0.35);
+      outline-offset: 2px;
+    }
+    .link-arrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--primary); font-size: 14px; }
+    .link-arrow:hover { text-decoration: underline; }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: var(--mint);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .brand-mark svg { width: 18px; height: 18px; fill: var(--primary); }
+    .brand-name { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; color: var(--ink); font-size: 17px; line-height: 1.2; }
+    .brand-tag { font-size: 12px; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .header-cta { padding: 10px 20px; font-size: 14px; }
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 44px; height: 44px;
+      cursor: pointer;
+      align-items: center; justify-content: center;
+    }
+    .menu-toggle span, .menu-toggle::before, .menu-toggle::after {
+      content: "";
+      display: block;
+      width: 18px; height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      position: absolute;
+    }
+    .menu-toggle span { position: static; margin: 0; }
+    .menu-toggle { position: relative; flex-direction: column; gap: 4px; }
+    .mobile-nav { display: none; border-top: 1px solid var(--border); background: var(--white); }
+    .mobile-nav.open { display: block; }
+    .mobile-nav ul { list-style: none; padding: 16px 24px 24px; display: grid; gap: 4px; }
+    .mobile-nav a { display: block; padding: 12px 0; font-weight: 500; color: var(--ink); border-bottom: 1px solid var(--border); }
+
+    /* Hero */
+    .hero { padding: 80px 0 112px; background: linear-gradient(180deg, var(--sky) 0%, var(--white) 100%); }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-left { grid-column: 1 / span 7; display: flex; flex-direction: column; gap: 32px; }
+    .hero-right { grid-column: 8 / span 5; position: relative; }
+    .pill-tag {
+      align-self: flex-start;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--mint);
+      border: 1px solid var(--border);
+      padding: 7px 15px;
+      border-radius: 9999px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
+      color: var(--primary);
+    }
+    .pill-tag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); }
+    .hero h1 { font-size: 48px; letter-spacing: -0.03em; }
+    .hero-intro p { font-size: 18px; line-height: 1.625; margin-bottom: 16px; max-width: 672px; }
+    .highlights-title { font-size: 14px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 16px; }
+    .highlights { list-style: none; display: grid; gap: 12px; }
+    .highlights li { display: flex; align-items: center; gap: 12px; font-size: 16px; }
+    .highlights li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; padding-top: 8px; }
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+    }
+    .trust-item { display: flex; align-items: center; gap: 12px; color: var(--ink); font-size: 14px; font-weight: 500; }
+    .trust-icon {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--sky);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .trust-icon svg { width: 16px; height: 16px; fill: var(--primary); }
+    .hero-image {
+      position: relative;
+      height: 540px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(189, 201, 198, 0.4);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(135deg, #cfe6e1 0%, #e7f6fe 55%, #b7d9d3 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .image-placeholder { text-align: center; color: var(--primary); font-weight: 600; font-size: 14px; padding: 24px; }
+    .image-placeholder svg { width: 56px; height: 56px; fill: var(--primary); opacity: 0.7; margin-bottom: 12px; }
+    .badge {
+      position: absolute;
+      left: 24px; right: 24px; bottom: 24px;
+      display: flex; align-items: center; gap: 14px;
+      padding: 17px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+    }
+    .badge-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--mint); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .badge-icon svg { width: 16px; height: 16px; fill: var(--primary); }
+    .badge h4 { font-size: 18px; margin-bottom: 2px; }
+    .badge p { font-size: 14px; }
+
+    /* Why choose */
+    .why-head { max-width: 672px; margin: 0 auto 56px; text-align: center; }
+    .why-head h2 { font-size: 36px; margin-bottom: 16px; }
+    .card-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; max-width: 1184px; margin: 0 auto; }
+    .feature-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 29px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .icon-box { width: 48px; height: 48px; border-radius: 14px; background: var(--sky); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+    .icon-box svg { width: 20px; height: 20px; fill: var(--primary); }
+    .feature-card h3 { font-size: 18px; margin-bottom: 12px; }
+    .feature-card p { font-size: 15px; }
+
+    /* Services */
+    .services { background: var(--sky); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 1184px; margin: 0 auto; }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 33px;
+      display: flex; flex-direction: column;
+      transition: box-shadow 0.2s ease;
+    }
+    .service-card:hover { box-shadow: var(--shadow-md); }
+    .service-card .icon-box { margin-bottom: 24px; }
+    .service-card h3 { font-size: 20px; margin-bottom: 12px; }
+    .service-card p { font-size: 15px; margin-bottom: 24px; flex: 1; }
+    .consult-banner {
+      max-width: 1184px; margin: 48px auto 0;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 41px;
+      display: flex; align-items: center; justify-content: space-between; gap: 32px;
+      flex-wrap: wrap;
+    }
+    .consult-banner h3 { color: var(--white); font-size: 24px; margin-bottom: 8px; }
+    .consult-banner p { color: #cfe9e5; font-size: 16px; max-width: 607px; }
+    .btn-light { background: var(--white); color: var(--primary); padding: 14px 24px; }
+    .btn-light:hover { background: var(--sky); }
+
+    /* Reviews */
+    .review-card {
+      max-width: 768px; margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 48px;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+    .review-quote-icon { width: 64px; height: 64px; border-radius: 50%; background: var(--sky); margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; }
+    .review-quote-icon svg { width: 24px; height: 24px; fill: var(--primary); }
+    .review-card h3 { font-size: 26px; margin-bottom: 16px; }
+    .review-card p { font-size: 16px; max-width: 576px; margin: 0 auto 28px; }
+
+    /* FAQ */
+    .faq-wrap { max-width: 928px; margin: 0 auto; display: grid; gap: 16px; }
+    .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 16px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-icon { width: 12px; height: 8px; flex-shrink: 0; transition: transform 0.2s ease; }
+    .faq-icon path { fill: var(--primary); }
+    .faq-item[open] .faq-icon { transform: rotate(180deg); }
+    .faq-answer { padding: 0 24px 20px; font-size: 15px; }
+    .faq-item[open] summary { border-bottom: 1px solid var(--border); }
+
+    /* About */
+    .about { background: var(--sky); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .about-copy h2 { font-size: 36px; margin-bottom: 20px; }
+    .about-copy p { font-size: 17px; margin-bottom: 24px; }
+    .checks { list-style: none; display: grid; gap: 14px; margin-bottom: 32px; }
+    .checks li { display: flex; align-items: center; gap: 12px; color: var(--ink); font-size: 16px; }
+    .check-dot { width: 24px; height: 24px; border-radius: 50%; background: var(--mint); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .check-dot svg { width: 11px; height: 8px; fill: var(--primary); }
+    .about-photo {
+      position: relative;
+      height: 502px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(189,201,198,0.4);
+      box-shadow: var(--shadow-lg);
+      background: linear-gradient(160deg, #b7d9d3 0%, #e7f6fe 60%, #d0e7e2 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .accent-pill {
+      position: absolute;
+      right: 24px; bottom: 24px;
+      display: flex; align-items: center; gap: 16px;
+      padding: 18px 22px;
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+    .accent-pill .icon-box { margin: 0; width: 44px; height: 44px; }
+    .accent-pill strong { display: block; font-family: "Plus Jakarta Sans", sans-serif; color: var(--ink); font-size: 16px; }
+    .accent-pill span { font-size: 13px; }
+
+    /* Booking */
+    .booking { background: var(--white); }
+    .booking-grid {
+      max-width: 1184px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start;
+    }
+    .booking-info h2 { font-size: 36px; margin-bottom: 16px; }
+    .booking-info > p { font-size: 17px; margin-bottom: 32px; }
+    .contact-cards { display: grid; gap: 16px; margin-bottom: 24px; }
+    .contact-card {
+      display: flex; align-items: center; gap: 17px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 17px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .contact-card .icon-box { margin: 0; width: 40px; height: 40px; border-radius: 12px; }
+    .contact-card .icon-box svg { width: 16px; height: 16px; }
+    .contact-card h4 { font-size: 16px; margin-bottom: 2px; }
+    .contact-card p { font-size: 14px; }
+    .reassure {
+      background: var(--sky);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 17px;
+      font-size: 14px;
+    }
+    .reassure strong { color: var(--ink); }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+    .form-card h3 { font-size: 24px; margin-bottom: 8px; }
+    .form-card > p { font-size: 15px; margin-bottom: 28px; }
+    .form-group { margin-bottom: 22px; }
+    .form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+    .form-group label span { color: #b42318; }
+    .input-wrap { position: relative; display: flex; align-items: center; }
+    .input-prefix {
+      position: absolute; left: 16px;
+      font-size: 15px; font-weight: 500; color: var(--ink);
+      pointer-events: none;
+    }
+    .form-group input {
+      width: 100%;
+      height: 50px;
+      padding: 0 16px;
+      border: 1px solid #c9d5d2;
+      border-radius: 10px;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 15px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-group input.has-prefix { padding-left: 56px; }
+    .form-group input::placeholder { color: #8aa19d; }
+    .form-group input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0, 92, 85, 0.15); }
+    .form-group input[aria-invalid="true"] { border-color: #b42318; }
+    .field-error { display: none; font-size: 13px; color: #b42318; margin-top: 6px; }
+    .field-error.show { display: block; }
+    .hint { font-size: 13px; margin-top: 6px; }
+    .submit-btn { width: 100%; height: 52px; margin-top: 8px; font-size: 15px; }
+    .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+    .status {
+      display: none;
+      margin-top: 20px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .status.show { display: block; }
+    .status.success { background: var(--mint); color: var(--primary); }
+    .status.error { background: #fef3f2; color: #b42318; border: 1px solid #fecdca; }
+    .form-note { text-align: center; font-size: 13px; margin-top: 16px; }
+
+    /* Final CTA */
+    .final-cta { padding: 80px 0; }
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      max-width: 1184px; margin: 0 auto;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 32px;
+      padding: 72px 48px;
+      text-align: center;
+      color: var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+    .cta-box::before, .cta-box::after {
+      content: ""; position: absolute; width: 320px; height: 320px; border-radius: 48px;
+      background: rgba(255,255,255,0.06);
+    }
+    .cta-box::before { top: -96px; right: -96px; }
+    .cta-box::after { bottom: -150px; left: -96px; }
+    .cta-box > * { position: relative; z-index: 1; }
+    .cta-box h2 { color: var(--white); font-size: 36px; margin-bottom: 16px; }
+    .cta-box p { color: #cfe9e5; font-size: 17px; max-width: 640px; margin: 0 auto 32px; }
+    .cta-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
+    .cta-box .btn-light { padding: 16px 30px; }
+    .btn-outline { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.5); padding: 16px 28px; }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+    /* Footer */
+    .site-footer { background: var(--ink); color: #aabbb8; padding-top: 64px; }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr 1fr; gap: 48px; padding-bottom: 48px; }
+    .footer-brand .brand-name { color: var(--white); }
+    .footer-brand .brand-mark { background: rgba(255,255,255,0.08); }
+    .footer-brand .brand-mark svg { fill: #7fd1c6; }
+    .footer-brand p { font-size: 14px; margin-top: 16px; color: #aabbb8; }
+    .footer-col h4 { color: var(--white); font-size: 15px; margin-bottom: 18px; }
+    .footer-col ul { list-style: none; display: grid; gap: 12px; }
+    .footer-col a, .footer-col li { font-size: 14px; color: #aabbb8; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-contact li { display: flex; gap: 12px; align-items: flex-start; }
+    .footer-contact svg { width: 14px; height: 14px; fill: #7fd1c6; margin-top: 3px; flex-shrink: 0; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 28px 0;
+      display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+      font-size: 13px;
+    }
+    .footer-bottom nav { display: flex; gap: 24px; }
+    .footer-bottom a:hover { color: var(--white); }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .nav-links { gap: 20px; }
+      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 960px) {
+      .nav-links, .header-cta { display: none; }
+      .menu-toggle { display: flex; }
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-left, .hero-right { grid-column: 1 / -1; }
+      .hero h1 { font-size: 40px; }
+      .about-grid, .booking-grid { grid-template-columns: 1fr; gap: 48px; }
+      .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .section-head h2, .why-head h2, .booking-info h2, .about-copy h2, .cta-box h2 { font-size: 30px; }
+    }
+    @media (max-width: 640px) {
+      .container { padding: 0 20px; }
+      section { padding: 56px 0; }
+      .hero { padding: 48px 0 72px; }
+      .hero h1 { font-size: 32px; }
+      .hero-image { height: 380px; }
+      .trust-row { grid-template-columns: 1fr; }
+      .card-grid, .service-grid { grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; }
+      .consult-banner { padding: 28px; }
+      .review-card { padding: 32px 24px; }
+      .form-card { padding: 28px 22px; }
+      .about-photo { height: 340px; }
+      .accent-pill { left: 16px; right: 16px; bottom: 16px; }
+      .cta-box { padding: 48px 24px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Sticky Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Vedha Dental Clinic home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2c-2.2 0-3.6.9-5 .9S4.3 2 2.5 4.2C.6 6.6 1.2 10.5 2.4 13c1.1 2.4 2 9 4.6 9 1.7 0 2.3-2.2 3.2-4.7.4-1.1.8-1.8 1.8-1.8s1.4.7 1.8 1.8c.9 2.5 1.5 4.7 3.2 4.7 2.6 0 3.5-6.6 4.6-9 1.2-2.5 1.8-6.4-.1-8.8C19.7 2 18.1 2.9 17 2.9S14.2 2 12 2z"/></svg>
+        </span>
+        <span>
+          <span class="brand-name" style="display:block;">Vedha Dental Clinic</span>
+          <span class="brand-tag" style="display:block;">Care for Your Teeth. Confidence in Your Smile.</span>
+        </span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#why-choose">Why Choose Us</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faqs">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;align-items:center;gap:12px;">
+        <a href="#appointment" class="btn btn-primary header-cta">Book an Appointment</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="#why-choose">Why Choose Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faqs">FAQ</a></li>
+        <li><a href="#appointment">Book an Appointment</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- 2. Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <span class="pill-tag">DENTAL CARE IN TIRUPPUR</span>
+
+          <h1>Your Smile Deserves the Best Care</h1>
+
+          <div class="hero-intro">
+            <p>At Vedha Dental Clinic, we believe every smile deserves gentle care, personal attention, and a reason to shine. Whether you need a routine dental check-up or treatment for a specific concern, we're here to help you feel comfortable at every step.</p>
+            <p>Your journey to a healthier, more confident smile starts here, with trusted dental care right here in Tiruppur.</p>
+          </div>
+
+          <div>
+            <p class="highlights-title">Care Highlights</p>
+            <ul class="highlights">
+              <li>Gentle Dental Care</li>
+              <li>Patient-Focused Approach</li>
+              <li>Located in Tiruppur</li>
+            </ul>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#appointment" class="btn btn-primary">Book Your Appointment &rarr;</a>
+            <a href="#services" class="btn btn-secondary">Explore Our Services</a>
+          </div>
+
+          <div class="trust-row">
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 9.3-8 10-4.6-.7-8-5-8-10V6l8-4z"/></svg>
+              </span>
+              Patient-Focused Care
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3.3 0-8 1.7-8 5v1h16v-1c0-3.3-4.7-5-8-5z"/></svg>
+              </span>
+              Personalised Attention
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C.8 8.5 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.2 4.5 4.5 8C19 16.5 12 21 12 21z"/></svg>
+              </span>
+              Your Oral Health Matters
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-image" role="img" aria-label="Dentist discussing dental options with a patient">
+            <div class="image-placeholder">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
+              <div>Replace with clinic photo:<br />dentist with patient</div>
+            </div>
+            <div class="badge">
+              <span class="badge-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 9.3-8 10-4.6-.7-8-5-8-10V6l8-4z"/></svg>
+              </span>
+              <div>
+                <h4>A Healthier Smile Starts Here</h4>
+                <p>Take the first step towards better oral health.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Achievement and Trust Section -->
+    <section id="why-choose">
+      <div class="container">
+        <div class="why-head">
+          <span class="eyebrow">Why Choose Us</span>
+          <h2>Dental Care Built Around You</h2>
+          <p>Every visit is designed to be clear, comfortable, and focused on your long-term oral health.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="feature-card">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3.3 0-8 1.7-8 5v1h16v-1c0-3.3-4.7-5-8-5z"/></svg>
+            </div>
+            <h3>Personalised Care</h3>
+            <p>Treatment guidance tailored to each patient's dental needs.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C.8 8.5 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.2 4.5 4.5 8C19 16.5 12 21 12 21z"/></svg>
+            </div>
+            <h3>Patient Comfort</h3>
+            <p>A welcoming approach designed to make dental visits more comfortable.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16v11H8l-4 4V4z"/></svg>
+            </div>
+            <h3>Clear Communication</h3>
+            <p>Understand your dental concerns and available treatment options.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.5 7-6.3-3.6L5.7 21l1.5-7L2 9.3l7-.8L12 2z"/></svg>
+            </div>
+            <h3>Healthy Smiles</h3>
+            <p>Supporting better oral hygiene and long-term dental health.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Dental Services Section -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Our Services</span>
+          <h2>Dental Services for Every Need</h2>
+          <p>From routine check-ups to targeted treatment, we offer care for your whole family.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6v4h4v6h-4v8H9v-8H5V7h4z"/></svg></div>
+            <h3>Dental Check-Up &amp; Consultation</h3>
+            <p>Regular dental check-ups help identify potential concerns early and keep your teeth and gums in good condition.</p>
+            <a href="#appointment" class="link-arrow">Learn More &rarr;</a>
+          </article>
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zm0 4a5 5 0 110 10 5 5 0 010-10z"/></svg></div>
+            <h3>Tooth Filling &amp; Cavity Treatment</h3>
+            <p>An examination can help determine whether a filling or another treatment is suitable for protecting a tooth affected by decay.</p>
+            <a href="#appointment" class="link-arrow">Learn More &rarr;</a>
+          </article>
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h14l-2 16h-4l-1-6-1 6H7L5 4z"/></svg></div>
+            <h3>Teeth Cleaning &amp; Scaling</h3>
+            <p>Professional cleaning helps remove plaque and hardened tartar that regular brushing cannot completely remove.</p>
+            <a href="#appointment" class="link-arrow">Learn More &rarr;</a>
+          </article>
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 2h2v7h7v2h-7v11h-2V11H4V9h7V2z" transform="rotate(45 12 12)"/></svg></div>
+            <h3>Tooth Extraction</h3>
+            <p>When removing a tooth is recommended, understand the procedure, treatment options, and aftercare before proceeding.</p>
+            <a href="#appointment" class="link-arrow">Learn More &rarr;</a>
+          </article>
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 5 5.6.8-4 3.9.9 5.5L12 14.7 7.1 17.2l.9-5.5-4-3.9 5.6-.8L12 2z"/></svg></div>
+            <h3>Cosmetic Dental Consultation</h3>
+            <p>Discuss concerns about the appearance of your teeth and explore suitable cosmetic dental options.</p>
+            <a href="#appointment" class="link-arrow">Learn More &rarr;</a>
+          </article>
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9C.8 8.5 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.2 4.5 4.5 8C19 16.5 12 21 12 21z"/></svg></div>
+            <h3>Family &amp; Children's Dental Care</h3>
+            <p>Support your family's oral health with routine check-ups and age-appropriate dental care guidance.</p>
+            <a href="#appointment" class="link-arrow">Learn More &rarr;</a>
+          </article>
+        </div>
+
+        <div class="consult-banner">
+          <div>
+            <h3>Not Sure What You Need?</h3>
+            <p>Book a consultation and we'll talk through your concerns and the options that suit you.</p>
+          </div>
+          <a href="#appointment" class="btn btn-light">Book a Consultation &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Patient Reviews Section -->
+    <section id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Patient Reviews</span>
+          <h2>What Our Patients Are Saying</h2>
+          <p>We believe in honest care, so we only share genuine feedback from the people we treat.</p>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 7h4v4c0 3-1.5 5-4 6l-1-1.5c1.2-.7 2-1.7 2-3H7V7zm8 0h4v4c0 3-1.5 5-4 6l-1-1.5c1.2-.7 2-1.7 2-3h-1V7z"/></svg>
+          </div>
+          <h3>Honest Reviews, No Fake Stories</h3>
+          <p>We don't publish invented testimonials. Read what real patients have shared about their experience at Vedha Dental Clinic.</p>
+          <a href="#appointment" class="btn btn-secondary">Share Your Experience</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FAQ Section -->
+    <section id="faqs" class="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQs</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Quick answers to common questions about visiting our clinic.</p>
+        </div>
+
+        <div class="faq-wrap">
+          <details class="faq-item">
+            <summary>How do I book an appointment?<svg class="faq-icon" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="#005c55" stroke-width="2" fill="none"/></svg></summary>
+            <div class="faq-answer">Fill in the appointment form on this page with your name, email, and phone number. Our front desk will contact you to confirm a suitable time.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need to visit for a check-up if my teeth feel fine?<svg class="faq-icon" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="#005c55" stroke-width="2" fill="none"/></svg></summary>
+            <div class="faq-answer">Yes. Regular check-ups can identify early signs of decay or gum problems before they cause discomfort, and they help keep your teeth in good condition.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you treat children?<svg class="faq-icon" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="#005c55" stroke-width="2" fill="none"/></svg></summary>
+            <div class="faq-answer">Yes. We offer family and children's dental care, including routine check-ups and age-appropriate guidance for oral hygiene.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Will a filling or extraction be painful?<svg class="faq-icon" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="#005c55" stroke-width="2" fill="none"/></svg></summary>
+            <div class="faq-answer">Your dentist will explain the procedure, the options available, and the aftercare before any treatment begins, so you can make an informed decision and feel comfortable with the plan.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How often should I get a professional cleaning?<svg class="faq-icon" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="#005c55" stroke-width="2" fill="none"/></svg></summary>
+            <div class="faq-answer">Professional cleaning removes plaque and hardened tartar that brushing cannot fully clear. Your dentist can recommend a schedule based on your oral health.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Can I ask about cosmetic options?<svg class="faq-icon" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="#005c55" stroke-width="2" fill="none"/></svg></summary>
+            <div class="faq-answer">Yes. A cosmetic dental consultation lets you discuss the appearance of your teeth and explore suitable options with our team.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What if I have a dental concern and don't know who to call?<svg class="faq-icon" viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5" stroke="#005c55" stroke-width="2" fill="none"/></svg></summary>
+            <div class="faq-answer">Contact our front desk directly for quick support or guidance on scheduling. You can also use the appointment form below.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. About the Clinic Section -->
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <span class="eyebrow">About the Clinic</span>
+          <h2>Dental Care That Puts You First</h2>
+          <p>Choosing a dental clinic is about more than treatment. It's about feeling comfortable asking questions, understanding your options, and knowing that your concerns are being heard. At Vedha Dental Clinic, we aim to make your dental care experience clear, supportive, and centred on your oral health.</p>
+          <ul class="checks">
+            <li><span class="check-dot"><svg viewBox="0 0 11 8"><path d="M1 4l3 3 6-6" stroke="#005c55" stroke-width="2" fill="none"/></svg></span>Clear explanations of every option</li>
+            <li><span class="check-dot"><svg viewBox="0 0 11 8"><path d="M1 4l3 3 6-6" stroke="#005c55" stroke-width="2" fill="none"/></svg></span>Gentle, unhurried appointments</li>
+            <li><span class="check-dot"><svg viewBox="0 0 11 8"><path d="M1 4l3 3 6-6" stroke="#005c55" stroke-width="2" fill="none"/></svg></span>Care for the whole family</li>
+          </ul>
+          <a href="#appointment" class="btn btn-primary">Book Your Visit &rarr;</a>
+        </div>
+
+        <div class="about-photo" role="img" aria-label="Dentist educating a patient with a tooth model">
+          <div class="image-placeholder">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 19V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2zM8.5 13.5l2.5 3 3.5-4.5 4.5 6H5l3.5-4.5z"/></svg>
+            <div>Replace with clinic photo:<br />dentist educating a patient</div>
+          </div>
+          <div class="accent-pill">
+            <span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 9.3-8 10-4.6-.7-8-5-8-10V6l8-4z"/></svg></span>
+            <div>
+              <strong>Clinical Care</strong>
+              <span>Clear, patient-first guidance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Appointment Booking Section -->
+    <section id="appointment" class="booking">
+      <div class="container">
+        <div class="booking-grid">
+          <div class="booking-info">
+            <span class="eyebrow">Book an Appointment</span>
+            <h2>Ready for a Healthier Smile?</h2>
+            <p>Whether you need a routine dental check-up, have a toothache, or want advice about your smile, we're here to help you take the next step towards better oral health.</p>
+
+            <div class="contact-cards">
+              <div class="contact-card">
+                <span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></span>
+                <div>
+                  <h4>Call the Front Desk</h4>
+                  <p>+91 00000 00000 (replace with your number)</p>
+                </div>
+              </div>
+              <div class="contact-card">
+                <span class="icon-box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg></span>
+                <div>
+                  <h4>Visit Our Clinic</h4>
+                  <p>Tiruppur, Tamil Nadu, India</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="reassure">
+              <strong>Reassurance Note:</strong> Share your details and our team will confirm your appointment and answer any questions before your visit.
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h3>Request an Appointment</h3>
+            <p>Share your details below and we'll get back to you to confirm a time.</p>
+
+            <form id="appointmentForm" novalidate>
+              <div class="form-group">
+                <label for="name">Full Name <span>*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="name" name="name" placeholder="Enter your full name" autocomplete="name" required />
+                </div>
+                <div class="field-error" id="nameError">Please enter your full name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address <span>*</span></label>
+                <div class="input-wrap">
+                  <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+                </div>
+                <div class="field-error" id="emailError">Please enter a valid email address.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number <span>*</span></label>
+                <div class="input-wrap">
+                  <span class="input-prefix" aria-hidden="true">+91</span>
+                  <input type="tel" id="phone" name="phone" class="has-prefix" placeholder="10-digit mobile number" inputmode="numeric" autocomplete="tel-national" maxlength="10" required />
+                </div>
+                <div class="field-error" id="phoneError">Enter a valid 10-digit Indian phone number.</div>
+                <p class="hint">Enter a valid 10-digit Indian phone number.</p>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">Submit Request</button>
+
+              <div class="status" id="statusMsg" role="status" aria-live="polite"></div>
+            </form>
+
+            <p class="form-note">We'll never share your details with third parties.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Final Call-to-Action Section -->
+    <section class="final-cta">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Take the First Step Towards a Healthier Smile</h2>
+          <p>Book a visit today and let our team help you feel confident about your oral health.</p>
+          <div class="cta-actions">
+            <a href="#appointment" class="btn btn-light">Book Your Appointment &rarr;</a>
+            <a href="#services" class="btn btn-outline">View Our Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 10. Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2c-2.2 0-3.6.9-5 .9S4.3 2 2.5 4.2C.6 6.6 1.2 10.5 2.4 13c1.1 2.4 2 9 4.6 9 1.7 0 2.3-2.2 3.2-4.7.4-1.1.8-1.8 1.8-1.8s1.4.7 1.8 1.8c.9 2.5 1.5 4.7 3.2 4.7 2.6 0 3.5-6.6 4.6-9 1.2-2.5 1.8-6.4-.1-8.8C19.7 2 18.1 2.9 17 2.9S14.2 2 12 2z"/></svg>
+            </span>
+            <div>
+              <span class="brand-name" style="display:block;">Vedha Dental Clinic</span>
+              <span class="brand-tag" style="display:block;color:#aabbb8;">Care for Your Teeth. Confidence in Your Smile.</span>
+            </div>
+          </div>
+          <p>Your dental care partner in Tiruppur, Tamil Nadu, focused on patient-centred care and better oral health.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Dental Services</a></li>
+            <li><a href="#reviews">Patient Reviews</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#appointment">Book an Appointment</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Clinic Hours</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z"/></svg>
+              <span>Tiruppur, Tamil Nadu, India</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              <span>+91 00000 00000</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2"/></svg>
+              <span>Mon to Sat, 9:30 AM to 7:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul>
+            <li>Need quick support or appointment scheduling guidance? Contact our front desk directly.</li>
+            <li><a href="#appointment">Request an appointment &rarr;</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Vedha Dental Clinic. All rights reserved.</span>
+        <nav aria-label="Legal">
+          <a href="#top">Privacy Policy</a>
+          <a href="#top">Terms of Use</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== CONFIGURATION =====
+    // Paste your deployed Apps Script Web app URL (ends in /exec) here.
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxJrrjtmxo849jkiq0tTf83-ESF4GWauzHBUaK2lOJkLcAdSSP4ZBu2Ci_xYgeqOJc/exec";
+
+    // ===== Mobile menu =====
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileNav = document.getElementById("mobileNav");
+    menuToggle.addEventListener("click", () => {
+      const open = mobileNav.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    });
+    mobileNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // ===== Footer year =====
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // ===== Form =====
+    const form = document.getElementById("appointmentForm");
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const submitBtn = document.getElementById("submitBtn");
+    const statusMsg = document.getElementById("statusMsg");
+
+    // Only allow digits in the phone field
+    phoneInput.addEventListener("input", () => {
+      phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 10);
+    });
+
+    function setFieldError(input, errorId, show) {
+      document.getElementById(errorId).classList.toggle("show", show);
+      input.setAttribute("aria-invalid", String(show));
+    }
+
+    function validate() {
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const phone = phoneInput.value.trim();
+
+      const nameOk = name.length >= 2;
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      const phoneOk = /^[6-9]\d{9}$/.test(phone);
+
+      setFieldError(nameInput, "nameError", !nameOk);
+      setFieldError(emailInput, "emailError", !emailOk);
+      setFieldError(phoneInput, "phoneError", !phoneOk);
+
+      return nameOk && emailOk && phoneOk;
+    }
+
+    function showSuccess() {
+      statusMsg.className = "status show success";
+      statusMsg.textContent = "Thank you! Your request has been received. Our team will contact you shortly to confirm your appointment.";
+      form.reset();
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Request";
+    }
+
+    function showError() {
+      statusMsg.className = "status show error";
+      statusMsg.textContent = "Sorry, something went wrong and your request was not sent. Please check your connection and try again.";
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Request";
+    }
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      statusMsg.className = "status";
+      statusMsg.textContent = "";
+
+      if (!validate()) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+
+      const params = new URLSearchParams({
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        phone: phoneInput.value.trim()
+      });
+      const url = SCRIPT_URL + "?" + params.toString();
+
+      fetch(url, { method: "GET", mode: "no-cors" })
+        .then(() => showSuccess())
+        .catch(() => showError());
+    });
+  </script>
+</body>
+</html>
